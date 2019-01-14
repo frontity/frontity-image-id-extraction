@@ -3,7 +3,7 @@
 Plugin Name: Frontity Image ID Extraction
 Plugin URI: 
 Description: Wordpress plugin that adds data-attachment-id to images in a new field content.raw.
-Version: 1.0.0
+Version: 1.0.1
 Author: Frontity
 Author URI: https://frontity.com/
 License: GPL v3
