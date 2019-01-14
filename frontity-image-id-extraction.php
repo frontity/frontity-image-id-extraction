@@ -100,13 +100,13 @@ function frontity_image_id_extraction_add_image_ids($data, $post_type, $request)
       $imgIds[] = intval($dataAttachmentId);
     } elseif ($wpImage && isset($wpImage[1])) {
       $image->setAttribute('data-attachment-id', $wpImage[1]);
-      $image->setAttribute('data-attachment-id-source', 'wp-image-class');
+      // $image->setAttribute('data-attachment-id-source', 'wp-image-class');
       $imgIds[] = intval($wpImage[1]);
     } else {
       $result = frontity_image_id_extraction_get_attachment_id($image->src);
       $id = $result['id'];
       $miss = $result['miss'];
-      $image->setAttribute('data-attachment-id-source', 'wp-query-transient-' . ($miss ? 'miss' : 'hit'));
+      // $image->setAttribute('data-attachment-id-source', 'wp-query-transient-' . ($miss ? 'miss' : 'hit'));
       if ($id !== 0) {
         $image->setAttribute('data-attachment-id', $id);
         $imgIds[] = intval($id);
