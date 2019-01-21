@@ -90,6 +90,9 @@ function frontity_image_id_extraction_add_image_ids($data, $post_type, $request)
   $post = get_post($data->data['id']);
   $postContent = $post->post_content;
 
+  $postContent = str_replace("\r", "\\r", $postContent);
+  $postContent = str_replace("\n", "\\n", $postContent);
+  
   $dom->load($postContent);
   $imgIds = [];
   foreach($dom->find('img') as $image) {
